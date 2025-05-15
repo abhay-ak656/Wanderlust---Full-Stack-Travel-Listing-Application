@@ -1,0 +1,115 @@
+<%layout('layouts/boilerplate')%>
+
+    <body>
+        <div class="row mt-5">
+            <div class="col-8 offset-2 newcontainer">
+                <h1>Create the item</h1>
+                <form method="post" action="/listing" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <div class="mb-3 ">
+                        <label for="title" class="form-label">Title:</label>
+                        <input type="text" name="listing[title]" placeholder="Enter the title" id="title"
+                            class="form-control" required>
+                            <div class="valid-feedback">
+                                good work
+                            </div>
+                            <div class="invalid-feedback">
+                                Please provide valid title!
+                             </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="desc" class="form-label">Description:</label>
+                        <textarea name="listing[description]" id="desc" rows="2" cols="30"
+                            class="form-control" required></textarea>
+                            <div class="valid-feedback">
+                                good work
+                            </div>
+                            <div class="invalid-feedback">
+                                Please provide valid description!
+                             </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">price:</label>
+                            <input type="number" name="listing[price]" placeholder="1300" id="price"
+                                class="form-control" required>
+                                <div class="valid-feedback">
+                                    good work
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please menton your price!
+                                </div>
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <label for="image" class="form-label">Image:</label>
+                            <input type="file" name="listing[image]" placeholder="Enter the image url" id="image"
+                                class="form-control" required>
+                             <div class="valid-feedback">
+                                good work
+                             </div>
+                            <div class="invalid-feedback">
+                                Please menton your Loaction!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="location" class="form-label">Location:</label>
+                        <input type="text" name="listing[location]" placeholder="Virar,Mumbai" id="location"
+                            class="form-control" required>
+                            <div class="valid-feedback">
+                                good work
+                            </div>
+                            <div class="invalid-feedback">
+                                Please menton your Loaction!
+                            </div>
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" name="listing[country]" placeholder="India" id="country"
+                            class="form-control" required>
+                            <div class="invalid-feedback">
+                                <div class="valid-feedback">
+                                    good work
+                                </div>
+                                Please menton your country!
+                            </div>
+                    </div>
+                    </div>
+                       <div class="mb-3 col">
+                        <label for="country" class="form-label">Category:</label>
+                           <div class="dropdown" style="display: inline;">
+                             <button class="btn btn-secondary col-8 dropdownbtn" data-bs-toggle="dropdown" aria-required="true" name="Category">
+                               choose the listing Category
+                             </button>
+                             <ul class="dropdown-menu">
+                                  <li class="dropdown-item">Amazing pools</li>
+                                  <li class="dropdown-item">Beachfront</li>
+                                  <li class="dropdown-item">Cabin</li>
+                                  <li class="dropdown-item">Treehouse</li> 
+                                  <li class="dropdown-item">Castle&Forts</li>
+                                  <li class="dropdown-item">TopCitis</li>
+                                  <li class="dropdown-item">Domes</li>
+                                  <li class="dropdown-item">Camp Fire</li>
+                                  <li class="dropdown-item">Top of world</li> 
+                             </ul>
+                           </div>
+                           <input type="hidden" name="listing[category]" id="categoryinput" required>
+                            <div class="invalid-feedback">
+                                Please menton your country!
+                            </div>
+                              <div class="valid-feedback">
+                                    good work
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn"
+                            style="background-color: #fe424d; border: none;  color: white;">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>

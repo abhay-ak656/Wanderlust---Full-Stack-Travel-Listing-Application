@@ -1,0 +1,104 @@
+ .container{
+    max-width: 100% !important;
+    /* margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0; */
+  }
+    .aboutuscontainer{
+      min-height: 100vh;
+      width: 100%;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    .coloum{
+        height: 30rem;
+        width: 100%;
+        padding-left: 0 !important;
+        margin-bottom: 1rem;
+    }
+ .row > * {
+  padding-right: 0 !important;
+ }
+
+.card-img{
+height: 100%; 
+object-fit: cover;
+opacity: 0.9;
+border-radius: 1rem;
+filter: brightness(50%);
+} 
+
+
+.cardoverlay{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    justify-content: space-evenly;
+}
+
+.col-12 h3 i{
+    font-size: 1rem;
+}
+.review-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.review{
+    height: 100%;
+    width: 33.5%;
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+.review .img-container{
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 1px 2px 5px black;
+}
+
+.review .review-content{
+     margin: 2rem;
+}
+
+@media(max-width:760px){
+  .cardoverlay{
+    font-size: small;
+  }
+   .coloum .col-6{
+    font-size: small;
+   }
+}
+
+@media(max-width:1050px){
+  .coloum{
+    flex-direction: column;
+  }
+  .coloum .col-6{
+    height: 50%;
+    width: 100%;
+  }
+}
+
+@media(max-width:550px){
+  .coloum{
+    height: 40rem;
+  }
+}
+
+@media(max-width:620px){
+    .reviewcol{
+      height: 90rem;
+  }
+  .review{
+  width: 100%;
+  }
+  .review-container{
+    flex-direction: column;
+    align-items: center;
+  }
+}

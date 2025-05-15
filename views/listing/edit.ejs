@@ -1,0 +1,83 @@
+<%layout('layouts/boilerplate')%>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1>Edit the Listing</h1>
+                <form method="post" action="/listing/<%=item.id%>?_method=patch"class="needs-validation" novalidate enctype="multipart/form-data">
+                    <div class="mb-3 divs">
+                        <label for="title" class="form-label">title:</label>
+                        <input type="text" name="listing[title]" value="<%=item.title%>" id="title" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please provide valid title!
+                         </div>
+                        <div class="valid-feedback">
+                            good work
+                        </div>
+                    </div>
+
+                    <div class="mb-3 divs">
+                        <label for="desc" class="form-label">description:</label>
+                        <textarea name="listing[description]" id="desc" rows="2"
+                            cols="30" class="form-control" required><%=item.description%></textarea>
+                            <div class="invalid-feedback">
+                                Please provide valid price!
+                             </div>
+                            <div class="valid-feedback">
+                                good work
+                            </div>
+                    </div>
+
+                    <div class="mb-3 divs">
+                        <label for="price" class="form-label">price:</label>
+                        <input type="text" name="listing[price]" value="<%=item.price%>" id="price" class="form-control" required>
+                        <div class="valid-feedback">
+                           good work
+                         </div>
+                        <div class="invalid-feedback">
+                           Please provide valid price!
+                        </div>
+                    </div>
+
+                     <div class="prev-image mb-3">
+                       <p>Previous image</p>
+                        <img src="<%=url%>">
+                    </div>  
+                    <div class="mb-3 divs">
+                        <label for="image" class="form-label">Upload new Image:</label>
+                        <input type="file" name="listing[image]" id="image" class="form-control" >
+                        <div class="valid-feedback">
+                            good work
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide valid price!
+                         </div>
+                    </div>
+
+                    <div class="mb-3 divs">
+                        <label for="location" class="form-label">Location:</label>
+                        <input type="text" name="listing[location]" value="<%=item.location%>" id="location" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please preovide valid price!
+                         </div>
+                         <div class="valid-feedback">
+                            good work
+                        </div>
+                    </div>
+
+                    <div class="mb-3 divs">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" name="listing[country]" value="<%=item.country%>" id="country" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please preovide valid price!
+                         </div>
+                            <div class="valid-feedback">
+                                good work
+                                </div>
+                    </div>
+
+                    <button class="btn mb-3" style="background-color: #fe424d; border: none;  color: white;">Edit</button>
+                </form>
+            </div>
+        </div>
+    </body>

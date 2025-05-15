@@ -1,0 +1,118 @@
+.navbar2{
+    height: 5rem;
+  }
+  .container-fluid2{
+    height: 100%;
+     display: flex;
+     margin-left: 2rem;
+     justify-content: space-between;
+  align-items: center;    
+  }
+
+  .icons{
+    margin-right: 2rem;
+    opacity:0.8;
+    cursor: pointer;
+  }
+  .icons:hover{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+
+.form-switch{
+  padding:1rem ;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px black;
+  background-color: rgba(255, 240, 250, 0.835);
+}
+
+.container-fluid2 .d-flex{
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0px 1rem;
+   overflow-x: auto;
+   
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.container-fluid2 .d-flex::-webkit-scrollbar{
+  display: none;
+}
+.search input{
+  height: 3rem;
+  width: 90%;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 1rem;
+  outline: none;
+  background: none;
+}
+.search button{
+  display: flex;
+  border-radius: 1.5rem;
+  align-items: center;
+}
+
+.search{
+  flex-direction: row !important;
+  width: 30% !important;
+
+}
+.search input:focus{
+  outline: none !important;
+  box-shadow: 1px 1px 5px black  !important;
+}
+.container-fluid2 a{
+  text-decoration: none;
+  color: black;
+}
+.fav-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+box-shadow: 1px 1px 5px black;
+  padding: 0.5rem;
+border-radius: 1.5rem;
+ background-color: #0d6efd;
+ color: white;
+}
+.fav-list:hover{
+  background: none;
+  color: black;
+}
+
+
+.scrollarrow{
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgb(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container-fluid{
+  display: flex;
+  justify-content: space-around;
+}
+.effect{
+  transition: all 1s ease-in 2s;
+}
+@media(max-width:990px){
+  .search {
+    width: 60% !important;
+  }
+}
+@media(max-width:350px){
+  .search{
+    display: none !important;
+  }
+}
+
+.navbar-nav .navlink:hover{
+  border-radius: 10px;
+  background-color: whitesmoke
+}

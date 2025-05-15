@@ -1,0 +1,155 @@
+
+<div class="sticky-top">
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand " href="/listing/Aboutus"><i class="fa-regular fa-compass"></i></a>
+        <form class="d-flex  search navbar-nav " role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-danger" type="button"><i class="fa-solid fa-magnifying-glass" style="margin-right: 0.5rem;"></i>Search</button>
+      </form>
+
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+
+        <div class="navbar-nav ms-auto" style="display: flex; align-items: center;">
+
+      <% if(currusr){%>
+          <a class="nav-link" href="/listing/user/favrioute">
+            <div class="fav-list me-2">
+               <div><i class="fa-solid fa-thumbs-up" style="transform: scale(1.5);"></i></div>
+               <div style="font-size: 0.8rem;">Your wishlist</div>
+            </div>
+        </a>
+      <% }%>
+        
+          <a class="nav-link navlink" href="/listing">Explore</a>
+           <a class="nav-link navlink" href="/listing/new">Airbnb your home</a>
+          <%if(!currusr){%>
+          <b><a class="nav-link navlink" aria-current="page" href="/listing/user/login">Login</a></b>
+          <b><a class="nav-link navlink" href="/listing/user/singup">Singup</a></b>
+        <%}%><%if(currusr) {%>
+          <b><a class="nav-link navlink" href="/listing/user/logout">Logout</a></b>
+          <%}%>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <% if(url===`/listing`) {%>
+  <nav class="navbar2" style="background-color: antiquewhite;">
+    <div class="container-fluid2 ">
+
+  <button class="scrollarrow" onclick="sl()" id="scrollarrow_left"><i class="fa-solid fa-chevron-left"></i></button>
+   <div class="d-flex overflow-auto" style="width: 60%;" id="categoryScroll">
+
+      <a href="/listing/category/Amazing pools">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-person-swimming" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Amazing pools</div>
+        </div>
+      </a>
+
+        <a href="/listing/category/Trending">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-fire" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Trending</div>
+        </div>
+        </a>
+
+
+        <a href="/listing/category/New">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-key" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">New</div>
+        </div>
+      </a>
+
+        <a href="/listing/category/Beachfront">
+        <div class="navbar-nav icons"  style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-water" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Beach front</div>
+        </div>
+       </a>
+
+
+       <a href="/listing/category/Cabin">
+        <div class="navbar-nav icons"  style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-landmark" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Cabin</div>
+        </div>
+      </a>
+
+      <a href="/listing/category/Treehouse">
+        <div class="navbar-nav icons"  style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-tree-city" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Treehouses</div>
+        </div>
+      </a>
+
+
+      <a href="/listing/category/Castle&Forts">
+        <div class="navbar-nav icons"  style="display: flex; align-items: center;">
+          <div><i class="fa-brands fa-fort-awesome" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Castle/Forts</div>
+        </div>
+      </a>
+
+
+
+         <a href="/listing/category/Castle&Forts">
+        <div class="navbar-nav icons"  style="display: flex; align-items: center;">
+          <div><i class="fa-brands fa-fort-awesome" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Castle/Forts</div>
+        </div>
+      </a>
+
+
+         <a href="/listing/category/Castle&Forts">
+        <div class="navbar-nav icons"  style="display: flex; align-items: center;">
+          <div><i class="fa-brands fa-fort-awesome" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Castle/Forts</div>
+        </div>
+      </a>
+
+       <a href="/listing/category/TopCitis">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-city" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">TopCitis</div>
+        </div>
+      </a>
+
+      <a href="/listing/category/Domes">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-igloo" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Domes</div>
+        </div>
+     </a>
+
+     <a href="/listing/category/Camp fire">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-dumpster-fire" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Camp fire</div>
+        </div>
+      </a>
+
+
+       <a href="/listing/category/Top of world">
+        <div class="navbar-nav icons" style="display: flex; align-items: center;">
+          <div><i class="fa-solid fa-earth-asia" style="transform: scale(1.3);"></i></div>
+           <div style="font-size: 0.8rem;">Top of world</div>
+        </div>
+       </a>
+    </div>
+    <button class="scrollarrow" onclick="scrollRight()" id="scrollarrow_Right"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="form-check-reverse form-switch ">
+               <input class="form-check-input " type="checkbox" role="switch" id="switchCheckDefault">
+              <label class="form-check-label " for="switchCheckDefault">Switch to Apply Gst</label>
+     </div>
+    </div>
+  </nav>
+  <%}%>
+  </div>

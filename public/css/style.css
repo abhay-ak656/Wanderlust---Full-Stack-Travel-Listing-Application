@@ -1,0 +1,185 @@
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+display: flex;
+ flex-direction: column; 
+}
+
+.navbar{
+    height: 5.5rem;
+    background-color: white;
+    z-index: 1;
+}
+
+.fa-compass{
+   font-size: 2rem;
+   color: #fe424d;
+}
+
+.nav-link{
+    color:  #333333;
+}
+
+footer{
+    height: 5rem !important;
+}
+.f-info{
+   height: 100% !important;
+   width: 100%;
+   background-color: whitesmoke;
+   color: #222;
+  border-top: 0.3px dashed lightslategray;
+
+   display: flex;
+   justify-content: space-between;
+   padding: 0 3rem;
+}
+.f-link,.f-socials{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.f-link {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.f-info-link span{
+    margin-left: 0.5rem;
+}
+.f-info-link span a{
+    margin-left: 0.2rem;
+    text-decoration: none;
+    color: #222;
+}
+.f-info-link a:hover{
+    text-decoration: underline;
+}
+
+.f-socials{
+    justify-content: flex-end;
+}
+
+.f-socials a{
+    text-decoration: none;
+    color: #222;
+    margin-right: 0.8rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+/* .f-socials i{
+    margin-right: 1.3rem;
+} */
+.container{
+   flex-grow: 1;
+}
+.card-img-top{
+    border-radius: 0.8rem;
+}
+
+.listing-card {
+    border: none;
+    margin-bottom: 1rem;
+}
+.container h2{
+    margin-bottom: 1rem;
+}
+.col a{
+    text-decoration: none;
+}
+
+.listing-card:hover{
+    transform: scale(1.06);
+    transition: all 0.3s ease-in-out;
+}
+.card-img-overlay button{
+   background: none;
+   border: none;
+   cursor: pointer;
+   outline: none;
+
+}
+.card-img-overlay button i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.3rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 0.5rem 1rem 0 0;
+}
+
+
+.liked{
+    color: red;
+    transform: scale(1.2);
+}
+
+@media (max-width:900px){
+    .f-info{
+        flex-direction: clay button iolumn;
+        padding: 0rem;
+    }
+
+    .f-info-link,.f-socials,.f-info-name{
+        font-size: 0.57rem;
+    }
+    .f-socials{
+        justify-content: center;
+    }
+    .f-socials a{
+        font-size: 0.57rem;
+    }
+}
+
+@media (max-width:620px){
+    .f-info{
+        flex-direction: column;
+    }
+    .f-link{
+        justify-content: center;
+    }
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons .btn{
+    margin-left: 1.2rem;
+}
+
+/* .valid-feedback {
+    display: block;
+}
+
+.form-control:focus ~ .invalid-feedback{
+    display: block;
+} */
+/* .form-control:focus ~.valid-feedback{
+    display: none;
+} */
+.was-validated .form-control:valid ~ .valid-feedback{
+    display: block;
+} 
+
+.was-validated .form-control:invalid ~ .invalid-feedback{
+    display: block;
+}
+
+.mapcontainer{
+    height: 20rem;
+    width: auto;
+}
+#map{
+    height: 100%;
+    width:100%;
+}

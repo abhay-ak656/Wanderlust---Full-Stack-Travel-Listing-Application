@@ -1,0 +1,28 @@
+<%layout('layouts/boilerplate')%>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+    <% for (let item of list) { %>
+      <div class="col">
+        <a href="/listing/<%=item.id%>">
+          <div class="card h-100 listing-card">
+            <img src="<%=item.image.url%>" class="card-img-top" alt="Listing image"
+              style="height: 15rem; object-fit: cover;">
+            <div class="card-img-overlay">
+              <button class="likebtn" data-id="<%=item.id%>"><i
+                  class="fa-heart <%=userfav.includes(item.id.toString())?'fa-solid liked':'fa-regular'%>"></i></button>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                <%= item.title %>
+              </h5>
+              <p class="card-text"><b>&#8377;<%= item.price.toLocaleString('en-IN') %>/night</b>&nbsp;&nbsp;&nbsp;<i
+                  id="GST" style="display: none;">18% GST</i><br>
+                <%=Math.floor(Math.random()*100)+1%> kilometer away
+              </p>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <% } %>
+  </div>
